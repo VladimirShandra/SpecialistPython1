@@ -17,4 +17,20 @@
 # #
 
 
-# TODO: your code here
+a = int(input("Введите сторону квардрата:"))
+
+i=1
+while i <= a:
+    j=1
+    symbol = ""
+    while j <= a:
+        if j==i or j==a-i+1:
+            symbol=symbol+"#"
+        else:
+            symbol=symbol+" "
+        j+=1
+    print(symbol)
+    i+=i
+
+
+
