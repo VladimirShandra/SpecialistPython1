@@ -9,4 +9,11 @@
 # 123
 # 1234
 
-# TODO: your code here
+n = int(input("Введите n:"))
+
+i = 1
+lesenka = ""
+while i <= n:
+    lesenka += str(i)
+    print(lesenka)
+    i+=1
