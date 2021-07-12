@@ -1,4 +1,15 @@
 # Дан список из n элементов, заполненный произвольными целыми числами в диапазоне от -100 до 100.
 # Вывести на экран сумму всех положительных элементов кратных двум.
 
-# TODO: your code here
+import random
+
+n=int(input("Введите количество элементов n:"))
+numbers = []
+sum_el=0
+for i in range(n):
+    numbers.append(random.randint(-100,100))  # раскомментируйте, чтобы посмотреть работу функции randint
+for el in numbers:
+    if el>0 and el%2==0:
+        sum_el +=el
+print(numbers)
+print("Сумма всех положительных элементов кратных двум равана:",sum_el)
