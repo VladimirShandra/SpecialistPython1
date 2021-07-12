@@ -9,5 +9,5 @@ def lucky_ticket(ticket_number):
 
 # Тестируем функцию
 print(lucky_ticket(123006))
-print(lucky_ticket(12321))
+print(lucky_ticket(123210))
 print(lucky_ticket(436751))
