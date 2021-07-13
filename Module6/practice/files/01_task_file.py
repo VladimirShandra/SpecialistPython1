@@ -17,3 +17,33 @@ for line in f:
 
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
+
+
+import os
+path = os.path.join("data", "limericks.txt")
+f = open(path, "r", encoding="UTF-8")
+
+
+# 1. Выведите содержимое файла в консоль
+
+for line in f:
+    print(line.rstrip())
+
+# 2. Узнайте количество непробельный символов в данном файле
+
+chars=0
+for line in f:
+    chars=chars+len(line)
+print(chars)
+
+# 3. Узнайте количество стихотворений, если известно,
+# что каждое стихотворение отделяется пустой строкой от предыдущего
+
+wanted_symbol = "\n"
+line_counter=0
+for line in f:
+    if wanted_symbol in line:
+        line_counter+=1
+print(line_counter)
+
+f.close
