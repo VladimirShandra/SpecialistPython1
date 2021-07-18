@@ -25,3 +25,24 @@
 # 2
 # Выходные данные-2:
 # 0
+
+H = int(input("Введите высоту дома (не более 100 этажей):"))
+n = int(input("Введите номер этажа на котором живет Коля:"))
+k = int(input("Введите через сколько этажей лифт имеет остановки:"))
+
+price_up = 200
+price_down = 100
+
+# price_list = []
+# for floor in range(1,H,k):
+#     if floor <= n:
+#         price = price_up*(n-int(floor))
+#     else:
+#         price = price_down*(int(floor)-n)
+#     price_list.append(price)#
+# print(min(price_list))
+
+# Попробовал сделать в одну строку исходя из цикла выше
+
+price_list = min([price_up * (n - floor) if floor <= n else (floor - n) * price_down for floor in range(1, H, k)])
+print(f"Минимальная стоимость подъема холодильника на этаж Коли равна: {price_list:.2f} руб.")
